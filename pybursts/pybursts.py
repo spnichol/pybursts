@@ -84,7 +84,7 @@ def kleinberg(offsets, s=2, gamma=1):
 
 	burst_counter = -1
 	prev_q = 0
-	stack = np.repeat(np.nan, N)
+	stack = np.zeros((int(N),), dtype=np.int)
 	stack_counter = -1
 	for t in range(n):
 		if q[t] > prev_q:
